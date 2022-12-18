@@ -1,9 +1,9 @@
-def encrypt(text, offset):
+def encrypt(message, offset):
     result = ""
 
     # transverse the plain txt
-    for i in range(len(text)):
-        char = text[i]
+    for i in range(len(message)):
+        char = message[i]
 
         if (char.isupper()):
             char = chr((ord(char) - ord('A') + offset) % 26 + ord('A'))
@@ -14,5 +14,5 @@ def encrypt(text, offset):
     return result
 
 
-def decrypt(text, offset):
-    return encrypt(text, -offset)
+def decrypt(message, offset):
+    return encrypt(message, -offset)
