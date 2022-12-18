@@ -1,5 +1,4 @@
 import random
-import string
 
 dictionary = {
     'a': ['S', ':', 'F', 'A', 'j', '3', 'r'],
