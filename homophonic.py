@@ -26,14 +26,17 @@ dictionary = {
     'w': ['&', '^'],
     'x': ['#'],
     'y': ['"', 'w'],
-    'z': ['T']
+    'z': ['T'],
+    ' ': ['ц', 'я', 'ь', 'и']
 }
 
 
 def encrypt(message):
+    result = ''
     for symbol in message.lower():
         if symbol in dictionary:
-            final += random.choice(dictionary[symbol])
+            result += random.choice(dictionary[symbol])
+    return result
 
 
 def decrypt(message):
@@ -42,3 +45,4 @@ def decrypt(message):
         for key in dictionary:
             if symbol in dictionary[key]:
                 result += key
+    return result
