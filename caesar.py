@@ -1,4 +1,5 @@
 def encrypt(message, offset):
+    """Прибавляет offset к Unicode code point каждого элемента message"""
     result = ""
 
     for i in range(len(message)):
@@ -7,4 +8,5 @@ def encrypt(message, offset):
 
 
 def decrypt(message, offset):
+    """Вызывает encrypt с отрицательным offset"""
     return encrypt(message, -offset)
