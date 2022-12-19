@@ -2,15 +2,6 @@ import caesar
 import homophonic
 
 
-encrypted_messages = []
-
-
-def print_encrypted_messages():
-    print('Encrypted messages: ')
-    for i in range(len(encrypted_messages)):
-        print(f'{i}: {encrypted_messages[i]}')
-
-
 def main_loop():
     while True:
         offset = 0
